@@ -1,0 +1,92 @@
+.home {
+  height: 92.65vh;
+  background: linear-gradient(180deg, #343A40 0%, #000000 100%);
+}
+
+
+.hero {
+  width: 50vw;
+  height: 25vw;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 25%;
+}
+
+.hero__img {
+  background-image: url(/assets/img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: auto;
+  width: 25vw;
+  height: 25vw;
+  animation: 2s fadeToTop;
+}
+
+.hero__button {
+  text-align: center;
+  display: inline;
+  position: absolute;
+  bottom: -55px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  transition: all 0.5s;
+}
+
+
+.hero__button .button {
+  background: linear-gradient(180deg, #007BFF 0%, #0064CF 100%);
+  border-radius: 3.5px;
+  color: #FFF;
+  padding: 10px 25px;
+  display: inline;
+  transition: all 0.5s;
+  animation: 2s flashLightBlue ease-in-out;
+}
+
+.hero__button .button:hover {
+  box-shadow: 0px 5px 15px rgba(1, 123, 254, 0.35);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.description {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+}
+
+.description h6 {
+  color: rgb(55, 55, 55);
+  text-align: center;
+}
+
+@keyframes fadeToTop {
+  from {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes flashLightBlue {
+  from {
+    box-shadow: 0px 0px 50px rgba(1, 123, 254, 0.5);
+  }
+  50% {
+    box-shadow: 0px 0px 50px rgba(1, 123, 254, 0.25);
+  }
+  to {
+    box-shadow: 0px 0px 50px rgba(1, 123, 254, 0);
+  }
+}
