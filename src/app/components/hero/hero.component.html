@@ -1,0 +1,32 @@
+<div class="container animated fadeIn">
+  <div class="hero">
+
+    <div class="hero__img">
+      <img [src]="hero.img" alt="">
+    </div>
+
+    <div class="hero__name">
+      <h1> {{ hero.nombre }} </h1>
+    </div>
+
+    <div class="hero__details">
+
+      <div class="hero__details--house" *ngIf=" hero.casa === 'Marvel'; else DC">
+        <h6 class="hero__details--house--marvel">Marvel</h6>
+      </div>
+
+      <ng-template class="hero__details--house" #DC>
+        <h6 class="hero__details--house--dc">DC</h6>
+      </ng-template>
+
+      <div class="hero__details--date">
+        <h6> {{ hero.aparicion }} </h6>
+      </div>
+    </div>
+
+    <div class="hero__bio">
+      <p> {{ hero.bio }} </p>
+    </div>
+
+  </div>
+</div>

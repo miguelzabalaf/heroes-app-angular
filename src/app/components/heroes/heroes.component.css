@@ -23,6 +23,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px;
   grid-auto-rows: minmax(300px, auto);
+  padding-bottom: 100px;
 }
 
 .hero {
@@ -35,6 +36,7 @@
   height: 235px;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .hero__header--img {
@@ -46,6 +48,7 @@
 
 .hero:hover .hero__header--img {
   filter: brightness(0.3);
+  transform: scale(1.02);
 }
 
 .hero__header--title  {
@@ -95,7 +98,16 @@
 .hero__header--title h2 {
   font-size: 21px;
   color: #CCC;
+}
 
+.hero__header--bg {
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180.61deg, rgba(255, 255, 255, 0) 1.35%, #000000 98.64%);
+  display: none;
 }
 
 @media screen and (max-width: 768px) and (min-width: 500px) {
@@ -107,5 +119,20 @@
 @media screen and (max-width: 500px) {
   .heroes {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__header--bg {
+    display: block;
+  }
+
+  .hero__header--title  {
+    transform: translateX(0);
+    z-index: 2;
+  }
+  .hero:hover .hero__header--img {
+    filter: brightness(1);
+    transform: scale(1);
   }
 }

@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container animated fadeIn">
   <div class="title">
     <h1>Heroes</h1>
     <small>Marvel and DC Comics</small>
@@ -7,22 +7,26 @@
 
   <div class="heroes">
 
-    <div class="hero" *ngFor="let hero of heroes" >
+    <div class="hero animated fadeIn" *ngFor="let hero of heroes; let i = index" >
 
         <div class="hero__header">
-          <img class="hero__header--img" src="/{{hero.img}}" alt="">
+          <img class="hero__header--img" [src]="hero.img" [alt]="hero.nombre">
           <div class="hero__header--title">
             <h2>{{ hero.nombre }}</h2>
           </div>
+          <div class="hero__header--bg"></div>
         </div>
 
       <div class="hero__footer">
         <div class="hero__footer--comic">
-          <h6>{{ hero.casa }}</h6>
+          <h6>{{ hero.casa | uppercase }}</h6>
         </div>
-        <div class="hero__footer--button">
+        <div (click)="showHero(i)" class="hero__footer--button">
           See more
         </div>
+        <!-- <a [routerLink]="['/hero', i]" class="hero__footer--button">
+          See more
+        </a> -->
       </div>
 
     </div>
