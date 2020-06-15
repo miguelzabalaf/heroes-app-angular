@@ -1,5 +1,31 @@
 .hero {
   margin-top: 50px;
+  position: relative;
+}
+
+.hero .backbutton {
+  display: inline-flex;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero .backbutton:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.hero .backbutton a {
+  display: flex;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.hero .backbutton a svg {
+  color: #FFF;
+  font-size: 21px;
 }
 
 .hero__img {

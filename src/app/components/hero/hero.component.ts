@@ -12,6 +12,7 @@ import { Heroe } from '../../interfaces/heroe.interface';
 export class HeroComponent implements OnInit {
 
   hero: Heroe;
+  recomentations: Heroe[] = []
 
   constructor( private activatedRoute: ActivatedRoute,
                private heroService: HeroesService 
@@ -21,11 +22,31 @@ export class HeroComponent implements OnInit {
 
       this.hero = this.heroService.getHero( params['id'] );
 
+      this.getRecomendations();
+
+
+
     } )
 
    }
 
   ngOnInit(): void {
+  }
+
+  getRecomendations() {
+
+    const heroes = this.heroService.getHeroes()
+
+    heroes.map( heroRec => {
+
+      if (heroRec.casa === this.hero.casa) {
+        this.recomentations.push(heroRec);
+      }
+
+    } )
+
+    return console.log(this.recomentations);
+
   }
 
 }
