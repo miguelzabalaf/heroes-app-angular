@@ -1,7 +1,7 @@
 
 .title {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .title h1{
@@ -13,7 +13,7 @@
 
 .title small {
   position: absolute;
-  color: #CCC;
+  color: #FFF;
   bottom: -10px;
   left: 5px;
 }
@@ -21,7 +21,7 @@
 .heroes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-gap: 25px;
   grid-auto-rows: minmax(300px, auto);
 }
 
@@ -63,16 +63,23 @@
 .hero__footer {
   height: 65px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 10px;
 }
+
+.hero__footer--comic h6 {
+  margin-bottom: 0px;
+  color: #CCC;
+}
+
+
 
 .hero__footer--button {
   background: linear-gradient(180deg, #007BFF 0%, #0064CF 100%);
   border-radius: 3.5px;
   color: #FFF;
-  padding: 5px 25px;
+  padding: 5px 15px;
   display: inline;
   transition: all 0.5s;
   animation: 2s flashLightBlue ease-in-out;
