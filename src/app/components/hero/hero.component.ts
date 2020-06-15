@@ -24,8 +24,6 @@ export class HeroComponent implements OnInit {
 
       this.getRecomendations();
 
-
-
     } )
 
    }
@@ -39,13 +37,11 @@ export class HeroComponent implements OnInit {
 
     heroes.map( heroRec => {
 
-      if (heroRec.casa === this.hero.casa) {
+      if (heroRec.casa === this.hero.casa && heroRec.nombre != this.hero.nombre) {
         this.recomentations.push(heroRec);
       }
 
     } )
-
-    return console.log(this.recomentations);
 
   }
 

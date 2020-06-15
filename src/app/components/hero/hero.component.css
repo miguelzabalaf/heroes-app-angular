@@ -1,5 +1,6 @@
 .hero {
   margin-top: 50px;
+  padding-bottom: 100px;
   position: relative;
 }
 
@@ -9,7 +10,7 @@
   background-color: rgba(255, 255, 255, 0.05);
   transition: all 0.3s;
   position: absolute;
-  top: 0;
+  top: -50px;
   left: 0;
 }
 
@@ -107,6 +108,65 @@
 .hero__bio p {
   color: #CCC;
 }
+
+.hero__recomendations {
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero__recomendations--title h3 {
+  color: #CCC;
+}
+
+.hero__recomendations--container {
+  padding-bottom: 15px;
+  display: flex;
+  overflow: auto;
+}
+
+.hero__recomendations--container .recomendation {
+  width: 250px;
+  height: 150px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.hero__recomendations--container .recomendation img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SCROLL BAR */
+
+.hero__recomendations--container::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.hero__recomendations--container::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+.hero__recomendations--container::-webkit-scrollbar-button:increment,.hero__recomendations--container::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.hero__recomendations--container::-webkit-scrollbar:horizontal {
+  height: 7px;
+}
+
+.hero__recomendations--container::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 204, 204, 0.35);
+  border-radius: 2px;
+}
+
+.hero__recomendations--container::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+/* SCROLL BAR */
 
 /* ANIMATIONS FOR THIS COMPONENT BY MIGUEL ZABALA */
 

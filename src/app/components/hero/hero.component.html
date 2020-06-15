@@ -37,5 +37,16 @@
       <p> {{ hero.bio }} </p>
     </div>
 
+    <div class="hero__recomendations">
+      <div class="hero__recomendations--title">
+        <h3>See other super heroes of {{ hero.casa }}</h3>
+      </div>
+      <div class="hero__recomendations--container">
+        <a class="recomendation" *ngFor="let recomendation of recomentations">
+          <img [src]="recomendation.img" alt="">
+        </a>
+      </div>
+    </div>
+
   </div>
 </div>
