@@ -1,0 +1,16 @@
+.mailto {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #FFF;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-right: 10px;
+}
+
+.twitter {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #FFF;
+  text-decoration: none;
+  background-color: rgba(0, 140, 255, 0.3);
+}
