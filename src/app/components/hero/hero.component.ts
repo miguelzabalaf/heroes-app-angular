@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { Heroe } from '../../interfaces/heroe.interface';
+
 
 @Component({
   selector: 'app-hero',
@@ -12,10 +13,12 @@ import { Heroe } from '../../interfaces/heroe.interface';
 export class HeroComponent implements OnInit {
 
   hero: Heroe;
+  heroes: Heroe[] = []
   recomentations: Heroe[] = []
 
   constructor( private activatedRoute: ActivatedRoute,
-               private heroService: HeroesService 
+               private heroService: HeroesService,
+               private router: Router 
     ) { 
 
     this.activatedRoute.params.subscribe( params => {
@@ -31,18 +34,27 @@ export class HeroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // getRecomendations() {
+
+  //   const heroes = this.heroService.getHeroes()
+
+  //   heroes.map( heroRec => {
+
+  //     if (heroRec.casa === this.hero.casa && heroRec.nombre != this.hero.nombre) {
+  //       this.recomentations.push(heroRec);
+  //     }
+
+  //   } )
+
+  // }
+
   getRecomendations() {
+     this.heroes = this.heroService.getHeroes();
+  }
 
-    const heroes = this.heroService.getHeroes()
 
-    heroes.map( heroRec => {
-
-      if (heroRec.casa === this.hero.casa && heroRec.nombre != this.hero.nombre) {
-        this.recomentations.push(heroRec);
-      }
-
-    } )
-
+  showRecomendation(idx: string) {
+    this.router.navigate( ['/hero', idx] )
   }
 
 }
