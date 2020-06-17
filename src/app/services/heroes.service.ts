@@ -10,7 +10,7 @@ export class HeroesService {
   private heroes: Heroe[] = [
     {
       nombre: "Aquaman",
-      bio: "El poder más reconocido de Aquaman es la capacidad telepática para comunicarse con la vida marina, la cual puede convocar a grandes distancias.",
+      bio: "Aquaman's most recognized power is the telepathic ability to communicate with marine life, which can summon at great distances.",
       img: "assets/img/aquaman.jpg",
       aparicion: "1941-11-01",
       casa:"DC",
@@ -18,7 +18,7 @@ export class HeroesService {
     },
     {
       nombre: "Batman",
-      bio: "Los rasgos principales de Batman se resumen en «destreza física, habilidades deductivas y obsesión». La mayor parte de las características básicas de los cómics han variado por las diferentes interpretaciones que le han dado al personaje.",
+      bio: "The main features of Batman are summarized in «physical dexterity, deductive abilities and obsession». Most of the basic characteristics of the comics have varied due to the different interpretations they have given to the character.",
       img: "assets/img/batman.jpg",
       aparicion: "1939-05-01",
       casa:"DC",
@@ -26,7 +26,7 @@ export class HeroesService {
     },
     {
       nombre: "Daredevil",
-      bio: "Al haber perdido la vista, los cuatro sentidos restantes de Daredevil fueron aumentados por la radiación a niveles superhumanos, en el accidente que tuvo cuando era niño. A pesar de su ceguera, puede \"ver\" a través de un \"sexto sentido\" que le sirve como un radar similar al de los murciélagos.",
+      bio: "Having lost his sight, Daredevil's remaining four senses were augmented by radiation to superhuman levels, in the accident he had as a child. Despite his blindness, he can 'see' through a 'sixth sense' that serves as a bat-like radar.",
       img: "assets/img/daredevil.jpg",
       aparicion: "1964-01-01",
       casa: "Marvel",
@@ -34,15 +34,15 @@ export class HeroesService {
     },
     {
       nombre: "Hulk",
-      bio: "Su principal poder es su capacidad de aumentar su fuerza hasta niveles prácticamente ilimitados a la vez que aumenta su furia. Dependiendo de qué personalidad de Hulk esté al mando en ese momento (el Hulk Banner es el más débil, pero lo compensa con su inteligencia).",
+      bio: "His main power is his ability to increase his strength to practically unlimited levels while increasing his fury. Depending on which Hulk personality is in command at the time (the Hulk Banner is the weakest, but he makes up for it with his intelligence).",
       img: "assets/img/hulk.jpg",
       aparicion: "1962-05-01",
       casa:"Marvel",
       id: 4
     },
     {
-      nombre: "Linterna Verde",
-      bio: "Poseedor del anillo de poder que posee la capacidad de crear manifestaciones de luz sólida mediante la utilización del pensamiento. Es alimentado por la Llama Verde (revisada por escritores posteriores como un poder místico llamado Starheart), una llama mágica contenida en dentro de un orbe (el orbe era en realidad un meteorito verde de metal que cayó a la Tierra, el cual encontró un fabricante de lámparas llamado Chang)",
+      nombre: "Green Lantern",
+      bio: "Possessor of the ring of power that possesses the ability to create manifestations of solid light through the use of thought. It is powered by the Green Flame (reviewed by later writers as a mystical power called Starheart), a magical flame contained within an orb (the orb was actually a green metal meteorite that fell to Earth, which a manufacturer found of lamps called Chang)",
       img: "assets/img/linterna-verde.jpg",
       aparicion: "1940-06-01",
       casa: "DC",
@@ -50,7 +50,7 @@ export class HeroesService {
     },
     {
       nombre: "Spider-Man",
-      bio: "Tras ser mordido por una araña radiactiva, obtuvo los siguientes poderes sobrehumanos, una gran fuerza, agilidad, poder trepar por paredes. La fuerza de Spider-Man le permite levantar 10 toneladas o más. Gracias a esta gran fuerza Spider-Man puede realizar saltos íncreibles. Un \"sentido arácnido\", que le permite saber si un peligro se cierne sobre él, antes de que suceda. En ocasiones este puede llevar a Spider-Man al origen del peligro.",
+      bio: "After being bitten by a radioactive spider, he obtained the following superhuman powers, great strength, agility, power to climb walls. Spider-Man's strength allows him to lift 10 tons or more. Thanks to this great strength Spider-Man can perform incredible jumps. A \ 'arachnid sense \', which lets you know if a danger hangs over it, before it happens. Sometimes this can lead Spider-Man to the source of the danger.",
       img: "assets/img/spiderman.jpg",
       aparicion: "1962-08-01",
       casa: "Marvel",
@@ -58,7 +58,7 @@ export class HeroesService {
     },
     {
       nombre: "Wolverine",
-      bio: "En el universo ficticio de Marvel, Wolverine posee poderes regenerativos que pueden curar cualquier herida, por mortal que ésta sea, además ese mismo poder hace que sea inmune a cualquier enfermedad existente en la Tierra y algunas extraterrestres . Posee también una fuerza sobrehumana, que si bien no se compara con la de otros superhéroes como Hulk, sí sobrepasa la de cualquier humano.",
+      bio: "In the fictional universe of Marvel, Wolverine has regenerative powers that can heal any wound, no matter how mortal it is, in addition that same power makes him immune to any disease on Earth and some aliens. He also possesses superhuman strength, which while not comparable to that of other superheroes like the Hulk, does surpass that of any human.",
       img: "assets/img/wolverine.jpg",
       aparicion: "1974-11-01",
       casa: "Marvel",

@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  anio: number;
+
+  constructor() { 
+    this.anio = new Date().getFullYear();
+   }
 
   ngOnInit(): void {
   }

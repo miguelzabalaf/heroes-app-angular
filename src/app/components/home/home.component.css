@@ -13,6 +13,7 @@
   left: 0;
   right: 0;
   top: 10%;
+  transition: all 0.3s;
 }
 
 .hero__img {
@@ -81,12 +82,18 @@
 
 @keyframes flashLightBlue {
   from {
-    box-shadow: 0px 0px 50px rgba(1, 123, 254, 0.5);
+    box-shadow: 0px 0px 50px rgba(1, 123, 254, 1);
   }
   50% {
-    box-shadow: 0px 0px 50px rgba(1, 123, 254, 0.25);
+    box-shadow: 0px 0px 50px rgba(1, 123, 254, 0.5);
   }
   to {
     box-shadow: 0px 0px 50px rgba(1, 123, 254, 0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    top: 35%;
   }
 }
