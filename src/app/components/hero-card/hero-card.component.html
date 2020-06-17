@@ -1,0 +1,23 @@
+<div class="hero animated fadeIn" >
+
+  <div class="hero__header">
+    <img class="hero__header--img" [src]="hero.img" [alt]="hero.nombre">
+    <div class="hero__header--title">
+      <h2>{{ hero.nombre }}</h2>
+    </div>
+    <div class="hero__header--bg"></div>
+  </div>
+
+<div class="hero__footer">
+  <div class="hero__footer--comic">
+    <h6>{{ hero.casa | uppercase }}</h6>
+  </div>
+  <div (click)="showHero( hero.id )" class="hero__footer--button">
+    See more
+  </div>
+  <!-- <a [routerLink]="['/hero', i]" class="hero__footer--button">
+    See more
+  </a> -->
+</div>
+
+</div>

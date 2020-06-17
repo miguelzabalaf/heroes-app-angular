@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { Heroe } from '../../interfaces/heroe.interface';
@@ -10,6 +10,7 @@ import { Heroe } from '../../interfaces/heroe.interface';
 })
 export class SearchComponent implements OnInit {
 
+  @Input() Hero:Heroe;
   heroes: Heroe[] = []
   term: string;
 
