@@ -43,9 +43,9 @@
       </div>
       <div class="hero__recomendations--container">
 
-        <div *ngFor="let recomendation of heroes; let i = index">
+        <div *ngFor="let recomendation of heroes">
           <div class="recomendation" *ngIf="recomendation.casa === hero.casa && recomendation.nombre != hero.nombre">
-            <a (click)="showRecomendation(i)" >
+            <a (click)="showRecomendation( recomendation.id )" >
               <img [src]="recomendation.img" alt="">
             </a>
           </div>

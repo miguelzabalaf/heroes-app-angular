@@ -1,14 +1,14 @@
 
 <div class="container animated fadeIn">
   <div class="title">
-    <h1 *ngIf="heroes.length > 0; else noHeroesfound">Resultados de {{ term }}</h1>
-    <ng-template #noHeroesfound><h1>No encontramos a {{ term }}</h1></ng-template>
-    <small>Marvel and DC Comics</small>
+    <h1 *ngIf="heroes.length > 0; else noHeroesfound"><span class="term">{{ term }}</span> results:</h1>
+    <ng-template #noHeroesfound><h1>The hero <span class="term">{{ term }}</span> was not found.</h1></ng-template>
+    <small>Super heroes from Marvel and DC Comics.</small>
   </div>
 
-  <div class="heroes">
+  <div class="heroes" *ngIf="heroes.length > 0">
 
-    <div class="hero animated fadeIn" *ngFor="let hero of heroes; let i = index" >
+    <div class="hero animated fadeIn" *ngFor="let hero of heroes" >
 
         <div class="hero__header">
           <img class="hero__header--img" [src]="hero.img" [alt]="hero.nombre">
@@ -22,7 +22,7 @@
         <div class="hero__footer--comic">
           <h6>{{ hero.casa | uppercase }}</h6>
         </div>
-        <div (click)="showHero(i)" class="hero__footer--button">
+        <div (click)="showHero( hero.id )" class="hero__footer--button">
           See more
         </div>
         <!-- <a [routerLink]="['/hero', i]" class="hero__footer--button">
@@ -34,5 +34,8 @@
 
   </div>
 
+  <div class="heroesNotFound" *ngIf="heroes.length === 0">
+    <img src="/assets/hero-not-found.svg" alt="">
+  </div>
 
 </div>

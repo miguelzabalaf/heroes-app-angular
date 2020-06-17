@@ -17,7 +17,7 @@
 
 .search {
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
@@ -48,13 +48,13 @@
   border-radius: 5px;
 }
 
-.search__button:hover {
+/* .search__button:hover {
   cursor: pointer;
 }
 
 .search__button:hover svg {
   color: #007BFF ;
-}
+} */
 
 .search__button svg {
   color: #FFF;

@@ -28,9 +28,9 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showHero(idx:number) {
+  showHero(id:number) {
 
-    this.router.navigate( ['/hero', idx] );
+    this.router.navigate( ['/hero', id] );
 
   }
 

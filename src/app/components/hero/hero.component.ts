@@ -14,7 +14,7 @@ export class HeroComponent implements OnInit {
 
   hero: Heroe;
   heroes: Heroe[] = [];
-  recomentations: Heroe[] = [];
+  recomentations: Heroe[] = []
 
   constructor( private activatedRoute: ActivatedRoute,
                private heroService: HeroesService,
@@ -53,8 +53,8 @@ export class HeroComponent implements OnInit {
   }
 
 
-  showRecomendation(idx: string) {
-    this.router.navigate( ['/hero', idx] )
+  showRecomendation(id: number) {
+    this.router.navigate( ['/hero', id] )
   }
 
 }
