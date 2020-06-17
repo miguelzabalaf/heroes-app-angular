@@ -13,8 +13,8 @@ import { Heroe } from '../../interfaces/heroe.interface';
 export class HeroComponent implements OnInit {
 
   hero: Heroe;
-  heroes: Heroe[] = []
-  recomentations: Heroe[] = []
+  heroes: Heroe[] = [];
+  recomentations: Heroe[] = [];
 
   constructor( private activatedRoute: ActivatedRoute,
                private heroService: HeroesService,

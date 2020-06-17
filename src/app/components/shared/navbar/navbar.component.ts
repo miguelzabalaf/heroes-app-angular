@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,14 +10,19 @@ export class NavbarComponent implements OnInit {
 
   @ViewChild('searchHero', { static: true }) search: Input;
 
-  constructor() { }
+  constructor( private router: Router ) { }
 
   ngOnInit(): void {
 
   }
 
   searchHero(term: string) {
-    console.log(term);
+    // console.log(term);
+    if (term.length > 0) {
+      this.router.navigate( ['/search', term] )
+    } else {
+      this.router.navigate( ['/heroes'] )
+    }
   }
 
 }

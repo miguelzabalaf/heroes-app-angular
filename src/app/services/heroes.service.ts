@@ -82,10 +82,10 @@ export class HeroesService {
         heroesArray.push( hero )
       }
 
-      return heroesArray;
-
     }
 
+    return heroesArray;
+    
   }
 
 }
