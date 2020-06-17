@@ -15,4 +15,8 @@ export class NavbarComponent implements OnInit {
 
   }
 
+  searchHero(term: string) {
+    console.log(term);
+  }
+
 }
